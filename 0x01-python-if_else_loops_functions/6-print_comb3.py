@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 
-for l in range(0, 10):
-    for r in range (l + 1, 10):
-        if (l == 8 and r == 9):
-            print("{}{}".format(l, r))
+for left in range(0, 10):
+    for right in range(left + 1, 10):
+        if (left == 8 and right == 9):
+            print("{}{}".format(left, right))
             continue
-        print("{}{}".format(l, r), end = ", ")
-
+        print("{}{}".format(left, right), end=", ")
