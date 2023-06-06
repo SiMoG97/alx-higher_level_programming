@@ -2,6 +2,6 @@
 
 for n in range(0, 100):
     if n == 99:
-        print(n)
+        print("{}".format(n))
         continue
-    print(f"{n:0>2}", end = ", ")
+    print("{:0>2}".format(n), end = ", ")
