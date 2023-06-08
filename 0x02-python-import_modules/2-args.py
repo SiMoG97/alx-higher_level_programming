@@ -10,8 +10,6 @@ def printArgs():
     print("{} argument{}{}".format(argsLen, printS, printDots))
 
     for i, arg in enumerate(sys.argv[1:], start=1):
-        #if i == 0:
-        #    continue
         print("{}: {}".format(i, arg))
 
 
