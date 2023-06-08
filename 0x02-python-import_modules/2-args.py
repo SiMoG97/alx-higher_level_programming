@@ -9,10 +9,9 @@ def printArgs():
     printDots = "." if argsLen == 0 else ":"
     print("{} argument{}{}".format(argsLen, printS, printDots))
 
-    for i, arg in enumerate(sys.argv):
-        if i == 0:
-            continue
-        print("{}: {}".format(i, arg))
+    for i, arg in enumerate(sys.argv, 1):
+        print("{}: {}".format(i - 1, arg))
+
 
 if __name__ == "__main__":
     printArgs()
