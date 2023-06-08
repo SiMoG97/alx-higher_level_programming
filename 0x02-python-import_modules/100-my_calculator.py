@@ -18,14 +18,17 @@ def calculator():
     a = int(args[1])
     b = int(args[3])
 
+    result = 0
     if op == "+":
-        print("{} {} {} = {}".format(a, op, b, add(a, b)))
+        result = add(a, b)
     elif op == "-":
-        print("{} {} {} = {}".format(a, op, b, sub(a, b)))
+        result = sub(a, b)
     elif op == "*":
-        print("{} {} {} = {}".format(a, op, b, mul(a, b)))
+        result = mul(a, b)
     else:
-        print("{} {} {} = {}".format(a, op, b, div(a, b)))
+        result = div(a, b)
+
+    print("{} {} {} = {}".format(a, op, b, result))
 
 
 if __name__ == "__main__":
