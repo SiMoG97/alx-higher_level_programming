@@ -1,2 +1,2 @@
-import builtins
-builtins.print("#pythoniscool")
+#!/usr/bin/python3
+__import__("pythoniscool")
