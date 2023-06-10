@@ -11,7 +11,7 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *halfList, *h = *head;
+	listint_t *halfList = NULL, *h = *head, *current;
 	unsigned int len = 0, halfLen = 0, startAt = 0, i;
 
 	len = linked_list_len(*head);
@@ -22,16 +22,17 @@ int is_palindrome(listint_t **head)
 	startAt = len - halfLen + 1;
 
 	halfList = copy_rev_linked_list(*head, startAt);
-
+	current = halfList;
 	for (i = 1; i <= halfLen; i++)
 	{
-		if (h->n != halfList->n)
+
+		if (h->n != current->n)
 		{
 			free_listint(halfList);
 			return (0);
 		}
 		h = h->next;
-		halfList = halfList->next;
+		current = current->next;
 	}
 
 	free_listint(halfList);
