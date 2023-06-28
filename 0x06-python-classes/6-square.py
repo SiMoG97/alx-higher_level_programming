@@ -21,6 +21,13 @@ class Square:
         if size < 0:
             raise ValueError("size must be >= 0")
 
+        if not isinstance(position, tuple) or len(position) != 2:
+            raise TypeError("Position must be a tuple of 2 positive integers")
+
+        x, y = position
+        if not isinstance(x, int) or not isinstance(y, int) or x < 0 or y < 0:
+            raise TypeError("Position must be a tuple of 2 positive integers")
+
         self.__size = size
         self.__position = position
 
@@ -83,7 +90,7 @@ class Square:
         Setter method for the position attribute.
 
         Args:
-            value (tuple): The new position to set, as a tuple of 2 ints
+            value (tuple): The new position to set, as a tuple of 2 ints.
         """
         if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("Position must be a tuple of 2 positive integers")
