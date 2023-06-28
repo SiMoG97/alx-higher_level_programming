@@ -83,7 +83,7 @@ class Square:
     def __str__(self):
         """Print a square pattern of '#' characters."""
         if self.__size == 0:
-            print()
+            return ""
         else:
             for _ in range(self.__position[1]):
                 print()
