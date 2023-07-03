@@ -15,8 +15,28 @@ class Rectangle:
             width (int, optional): width value. Defaults to 0.
             height (int, optional): height value. Defaults to 0.
         """
+        self._posIntCheck(width, "width")
+        self._posIntCheck(height, "height")
+
         self.__width = width
         self.__height = height
+
+    def _posIntCheck(self, value, attrName):
+        """_summary_
+
+        Args:
+            value (int): a number to check
+            attrName (str): the attribute's name
+
+        Raises:
+            TypeError: {attributeName} must be integer
+            ValueError: {attributeName} must be >= 0
+        """
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(attrName))
+
+        if value < 0:
+            raise ValueError("{} must be >= 0".format(attrName))
 
     @property
     def width(self):
@@ -33,16 +53,8 @@ class Rectangle:
 
         Args:
             value (int): a number
-
-        Raises:
-            TypeError: width must be an integer
-            ValueError: width must be >= 0
         """
-        if not isinstance(value, int):
-            raise TypeError("width must be an integer")
-
-        if value < 0:
-            raise ValueError("width must be >= 0")
+        self._posIntCheck(value, "width")
 
         self.__width = value
 
@@ -61,15 +73,7 @@ class Rectangle:
 
         Args:
             value (int): a number
-
-        Raises:
-            TypeError: height must be an integer
-            ValueError: height must be >= 0
         """
-        if not isinstance(value, int):
-            raise TypeError("height must be an integer")
-
-        if value < 0:
-            raise ValueError("height must be >= 0")
+        self._posIntCheck(value, "height")
 
         self.__height = value
