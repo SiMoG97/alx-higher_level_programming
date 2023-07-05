@@ -14,8 +14,8 @@ def add_integer(a, b=98):
     """Adds two integers
 
     Args:
-        a (int): a number
-        b (int, optional): a number. Defaults to 98.
+        a (int | float): a number
+        b (int | float, optional): a number. Defaults to 98.
 
     Raises:
         TypeError: a must be an integer
