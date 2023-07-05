@@ -3,7 +3,7 @@
 >>> say_my_name("Robert", "Leva")
 My name is Robert Leva
 
-">>> say_my_name("Sergio")
+>>> say_my_name("Sergio")
 My name is Sergio 
 
 >>> say_my_name("")
