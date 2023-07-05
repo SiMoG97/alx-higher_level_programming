@@ -18,3 +18,56 @@ TypeError: first_name must be a string
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string
+
+>>> say_my_name("Bob", )
+My name is Bob 
+
+>>> say_my_name([])
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name(())
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name({})
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name(a)
+Traceback (most recent call last):
+    ...
+NameError: name 'a' is not defined
+
+>>> say_my_name("Bob", [])
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name("Bob", ())
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name("Bob", {})
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name("Bob", None)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+>>> say_my_name("Bob", a)
+Traceback (most recent call last):
+    ...
+NameError: name 'a' is not defined
