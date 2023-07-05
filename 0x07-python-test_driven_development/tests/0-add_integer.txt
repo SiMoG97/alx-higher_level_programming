@@ -107,3 +107,8 @@ ZeroDivisionError: division by zero
 Traceback (most recent call last):
     ...
 TypeError: 'int' object is not iterable
+
+>>> add_integer(list())
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
