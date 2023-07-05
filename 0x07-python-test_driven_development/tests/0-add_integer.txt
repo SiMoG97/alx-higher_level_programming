@@ -6,8 +6,20 @@
 >>> add_integer(100, -2)
 98
 
+>>> add_integer(-10, 5)
+-5
+
 >>> add_integer(2)
 100
+
+>>> add_integer(2.5)
+100
+
+>>> add_integer(-5)
+93
+
+>>> add_integer(-5.5)
+93
 
 >>> add_integer(100.3, -2)
 98
@@ -17,6 +29,9 @@
 
 >>> add_integer(0.5, 20.5)
 20
+
+>>> add_integer(0, 0)
+0
 
 >>> add_integer()
 Traceback (most recent call last):
