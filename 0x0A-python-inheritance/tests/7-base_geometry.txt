@@ -36,3 +36,22 @@ Traceback (most recent call last):
     ...
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
+>>> bg.integer_validator("distance", [5, 4, 2])
+Traceback (most recent call last):
+    ...
+TypeError: distance must be an integer
+
+>>> bg.integer_validator("distance", {5, 4, 2})
+Traceback (most recent call last):
+    ...
+TypeError: distance must be an integer
+
+>>> bg.integer_validator("distance", {5, 4, 2})
+Traceback (most recent call last):
+    ...
+TypeError: distance must be an integer
+
+>>> bg.integer_validator("distance", {"a": 5, "b": 4, "c": 2})
+Traceback (most recent call last):
+    ...
+TypeError: distance must be an integer
