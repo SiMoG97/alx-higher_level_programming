@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
 """Rectangle class"""
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Rectangle(BaseGeometry):
@@ -15,6 +15,6 @@ class Rectangle(BaseGeometry):
         """
         super().__init__()
         self.integer_validator("width", width)
-        self.integer_validator("height", height)
         self.width = width
+        self.integer_validator("height", height)
         self.height = height
