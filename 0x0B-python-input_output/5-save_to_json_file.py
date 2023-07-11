@@ -13,5 +13,5 @@ def save_to_json_file(my_obj, filename):
     Returns:
         int: the number of characters written
     """
-    with open(filename, mode="a") as f:
+    with open(filename, mode="w") as f:
         return f.write(json.dumps(my_obj))
