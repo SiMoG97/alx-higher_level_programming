@@ -19,14 +19,11 @@ def pascal_triangle(n):
     for i in range(n):
         innerList = []
         for j in range(i + 1):
-            try:
-                if j == i or j == 0:
-                    innerList.append(1)
-                    continue
-                num = myList[i - 1][j] + myList[i - 1][j - 1]
-                innerList.append(num)
-            except IndexError:
+            if j == i or j == 0:
                 innerList.append(1)
+                continue
+            num = myList[i - 1][j] + myList[i - 1][j - 1]
+            innerList.append(num)
 
         myList.append(innerList)
     return myList
