@@ -2,7 +2,11 @@
 const process = require('process');
 
 const args = process.argv;
-if (args.length) {
-  console.log('sadf');
+const argsLen = args.length;
+if (argsLen === 2) {
+  console.log('No argument');
+} else if (argsLen === 3) {
+  console.log('Argument found');
+} else {
+  console.log('Arguments found');
 }
-console.log(process.argv);
