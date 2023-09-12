@@ -7,12 +7,12 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    let letter = c;
-    if (!letter) {
-      letter = 'X';
-    }
-    for (let i = 0; i < this.width; i++) {
-      console.log(letter.repeat(this.width));
+    if (!c) {
+      this.print();
+    } else {
+      for (let i = 0; i < this.width; i++) {
+        console.log(c.repeat(this.width));
+      }
     }
   }
 }
