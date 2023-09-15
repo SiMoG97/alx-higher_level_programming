@@ -29,8 +29,8 @@ if __name__ == "__main__":
     query_rows = cur.fetchall()
 
     for i, row in enumerate(query_rows):
-        # if (i == len(query_rows) - 1):
-        #     print(*row)
-        # else:
-        #     print(*row, end=", ")
-        print(*row, end=", " if i != len(query_rows) - 1 else "\n")
+        if (i == len(query_rows) - 1):
+            print(*row)
+        else:
+            print(*row, end=", ")
+        # print(*row, end=", " if i != len(query_rows) - 1 else "\n")
