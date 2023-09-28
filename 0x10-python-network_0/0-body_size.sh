@@ -5,4 +5,4 @@ if [[ $# -lt 1 ]]; then
     exit 1
 fi
 url="$1"
-curl -sI "$url" | grep "Content-Length" | cut -d ' ' -f 2
+curl -s -o - "$url" | wc -c 
