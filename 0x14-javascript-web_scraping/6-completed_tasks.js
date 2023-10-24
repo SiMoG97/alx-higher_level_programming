@@ -2,10 +2,10 @@
 const { argv } = process;
 const request = require('request');
 
-if (process.argv.length < 3) {
-  console.error('Usage: node 6-completed_tasks.js <URL>');
-  process.exit(1);
-}
+// if (process.argv.length < 3) {
+//   console.error('Usage: node 6-completed_tasks.js <URL>');
+//   process.exit(1);
+// }
 
 request(argv[2], function (err, res, data) {
   if (err) {
