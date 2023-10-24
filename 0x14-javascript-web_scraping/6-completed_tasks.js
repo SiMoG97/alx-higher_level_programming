@@ -12,17 +12,21 @@ request(argv[2], function (err, res, data) {
     console.error(err);
     return;
   }
-  const todos = JSON.parse(data);
+  try {
+    let todos = JSON.parse(data);
+    todos = Array.isArray(todos) ? todos : [];
+    const completedTasks = todos.reduce((compTasks, currTask) => {
+      const uid = currTask.userId;
 
-  const completedTasks = todos.reduce((compTasks, currTask) => {
-    const uid = currTask.userId;
+      if (isNaN(compTasks[uid])) {
+        compTasks[uid] = 0;
+      }
+      currTask.completed && compTasks[uid]++;
+      return compTasks;
+    }, {});
 
-    if (isNaN(compTasks[uid])) {
-      compTasks[uid] = 0;
-    }
-    currTask.completed && compTasks[uid]++;
-    return compTasks;
-  }, {});
-
-  console.log(completedTasks);
+    console.log(completedTasks);
+  } catch (e) {
+    console.error(e);
+  }
 });
